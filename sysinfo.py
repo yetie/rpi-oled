@@ -97,7 +97,7 @@ def get_ip(iface):
 
 def stats(device):
     # use custom font
-    font_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
+    font_path = os.path.abspath(os.path.join(os.path.dirname(__file__),'..',
                                 'luma.examples','examples','fonts', 'C&C Red Alert [INET].ttf'))
     font2 = ImageFont.truetype(font_path, 12)
 
