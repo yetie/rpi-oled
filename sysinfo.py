@@ -22,12 +22,16 @@ from datetime import datetime
 if os.name != 'posix':
     sys.exit('{} platform not supported'.format(os.name))
 
-from luma.core.interface.serial import i2c
+from luma.core.interface.serial import i2c, spi
 from luma.core.render import canvas
-from luma.oled.device import ssd1306
+from luma.oled.device import ssd1306, ssd1331, ssd1351
 
-serial = i2c(port=1, address=0x3C)
-device = ssd1306(serial, rotate=0)
+#serial = i2c(port=1, address=0x3C)
+#device = ssd1306(serial, rotate=0)
+
+serial = spi(device=0, port=0)
+device = ssd1351(serial)
+
 from PIL import ImageFont
 
 try:
