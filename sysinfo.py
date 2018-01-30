@@ -104,9 +104,12 @@ def stats(device):
 #                                 'fonts/mareib_reg/MARKEN__.TTF'))
 #     font2 = ImageFont.truetype(font_path, 8)
 
+    # font_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
+    #                             'fonts/everyday/Everyday.ttf'))
+    # font2 = ImageFont.truetype(font_path, 10)
     font_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                'fonts/everyday/Everyday.ttf'))
-    font2 = ImageFont.truetype(font_path, 10)
+                                'fonts/mun_ext/MUNIE___.TTF'))
+    font2 = ImageFont.truetype(font_path, 8)
 
     with canvas(device) as draw:
         draw.text((0, 0), cpu_usage(), font=font2, fill="white")
