@@ -15,7 +15,6 @@ Needs psutil (+ dependencies) installed::
 
 import os
 import sys
-import commands
 import time
 from datetime import datetime
 
